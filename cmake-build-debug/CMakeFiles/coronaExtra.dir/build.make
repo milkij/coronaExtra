@@ -76,27 +76,27 @@ include CMakeFiles/coronaExtra.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/coronaExtra.dir/flags.make
 
-CMakeFiles/coronaExtra.dir/main.cpp.o: CMakeFiles/coronaExtra.dir/flags.make
-CMakeFiles/coronaExtra.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alexandershirokov/CLionProjects/coronaExtra/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/coronaExtra.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/coronaExtra.dir/main.cpp.o -c /Users/alexandershirokov/CLionProjects/coronaExtra/main.cpp
+CMakeFiles/coronaExtra.dir/module_10/task_10.6.2.cpp.o: CMakeFiles/coronaExtra.dir/flags.make
+CMakeFiles/coronaExtra.dir/module_10/task_10.6.2.cpp.o: ../module\ 10/task\ 10.6.2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/alexandershirokov/CLionProjects/coronaExtra/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/coronaExtra.dir/module_10/task_10.6.2.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/coronaExtra.dir/module_10/task_10.6.2.cpp.o -c "/Users/alexandershirokov/CLionProjects/coronaExtra/module 10/task 10.6.2.cpp"
 
-CMakeFiles/coronaExtra.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/coronaExtra.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/alexandershirokov/CLionProjects/coronaExtra/main.cpp > CMakeFiles/coronaExtra.dir/main.cpp.i
+CMakeFiles/coronaExtra.dir/module_10/task_10.6.2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/coronaExtra.dir/module_10/task_10.6.2.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/alexandershirokov/CLionProjects/coronaExtra/module 10/task 10.6.2.cpp" > CMakeFiles/coronaExtra.dir/module_10/task_10.6.2.cpp.i
 
-CMakeFiles/coronaExtra.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/coronaExtra.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/alexandershirokov/CLionProjects/coronaExtra/main.cpp -o CMakeFiles/coronaExtra.dir/main.cpp.s
+CMakeFiles/coronaExtra.dir/module_10/task_10.6.2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/coronaExtra.dir/module_10/task_10.6.2.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/alexandershirokov/CLionProjects/coronaExtra/module 10/task 10.6.2.cpp" -o CMakeFiles/coronaExtra.dir/module_10/task_10.6.2.cpp.s
 
 # Object files for target coronaExtra
 coronaExtra_OBJECTS = \
-"CMakeFiles/coronaExtra.dir/main.cpp.o"
+"CMakeFiles/coronaExtra.dir/module_10/task_10.6.2.cpp.o"
 
 # External object files for target coronaExtra
 coronaExtra_EXTERNAL_OBJECTS =
 
-coronaExtra: CMakeFiles/coronaExtra.dir/main.cpp.o
+coronaExtra: CMakeFiles/coronaExtra.dir/module_10/task_10.6.2.cpp.o
 coronaExtra: CMakeFiles/coronaExtra.dir/build.make
 coronaExtra: CMakeFiles/coronaExtra.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/alexandershirokov/CLionProjects/coronaExtra/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable coronaExtra"

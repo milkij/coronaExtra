@@ -26,7 +26,7 @@ std::string decrypt_caesar (std::string str, int number) {
     return encrypt_caesar(str, number * -1);
 }
 
-int main() {
+int main () {
     std::cout << "Input a string: " << std::endl;
     std::string str;
     std::getline(std::cin, str) ;

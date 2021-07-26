@@ -142,32 +142,32 @@ coronaExtra/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/build
 .PHONY : coronaExtra/fast
 
-main.o: main.cpp.o
+module_10/task_10.6.2.o: module_10/task_10.6.2.cpp.o
 
-.PHONY : main.o
+.PHONY : module_10/task_10.6.2.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/main.cpp.o
-.PHONY : main.cpp.o
+module_10/task_10.6.2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/module_10/task_10.6.2.cpp.o
+.PHONY : module_10/task_10.6.2.cpp.o
 
-main.i: main.cpp.i
+module_10/task_10.6.2.i: module_10/task_10.6.2.cpp.i
 
-.PHONY : main.i
+.PHONY : module_10/task_10.6.2.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/main.cpp.i
-.PHONY : main.cpp.i
+module_10/task_10.6.2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/module_10/task_10.6.2.cpp.i
+.PHONY : module_10/task_10.6.2.cpp.i
 
-main.s: main.cpp.s
+module_10/task_10.6.2.s: module_10/task_10.6.2.cpp.s
 
-.PHONY : main.s
+.PHONY : module_10/task_10.6.2.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/main.cpp.s
-.PHONY : main.cpp.s
+module_10/task_10.6.2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/module_10/task_10.6.2.cpp.s
+.PHONY : module_10/task_10.6.2.cpp.s
 
 # Help Target
 help:
@@ -178,9 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... coronaExtra"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... module_10/task_10.6.2.o"
+	@echo "... module_10/task_10.6.2.i"
+	@echo "... module_10/task_10.6.2.s"
 .PHONY : help
 
 
