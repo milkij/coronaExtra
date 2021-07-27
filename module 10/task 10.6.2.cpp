@@ -4,70 +4,63 @@
 
 #include "iostream"
 
-bool checkSymbol (char chr) {
-    bool value = false;
+bool checkAvailableCharInString (std::string str) {
+    bool is_exists = true;
     std::string specialSymbols = "@.!#$%&'*+-/=?^_`{|}~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    for (int i = 0; i < specialSymbols.length(); i++) {
-        if (specialSymbols[i] == chr) {
-            value = true;
-            break;
+    for (int i = 0; i < str.length() && is_exists; i++) {
+        is_exists = false;
+        for (int j = 0; j < specialSymbols.length(); j++) {
+            if (str[i] == specialSymbols[j]) {
+                is_exists = true;
+                break;
+            }
         }
     }
-    return value;
+    return is_exists;
 }
 
-bool countOfSymbols (std::string str) {
-    bool cnt = false;
-    int points = 0;
-    int ats = 0;
-    for (int i = 0; i < str.length(); i++) {
+bool findPointsAndAts (std::string str) {
+    bool is_exists = false;
+    if (checkAvailableCharInString(str)) is_exists = true;
+    int points = 0, ats = 0;
+    for (int i = 0; i < str.length() && is_exists; i++) {
         if (str[i] == '.') points++;
         if (str[i] == '@') ats++;
-        if (points > 0 && ats == 1) cnt = true;
     }
-    return cnt;
+    if (points > 0 && ats == 1 && is_exists) return true;
+    else return false;
 }
 
-bool secondPartContainsPoints (std::string str) {
-    bool thereIs = false;
-    int i = 0;
-    //std::string second;
-    if (countOfSymbols(str)) thereIs = true;
-    for (; i < str.length() && thereIs; i++) {
-        if (str[i] == '@') {
-            i += 1;
-            break;
-        }
+bool checkCases (std::string str) {
+    bool is_valid = false;
+    if (findPointsAndAts(str)) is_valid = true;
+    for (int i = 0; i <= '@' && is_valid; i++) {
+        if
+       if (!(i == 0 && (str[i]) == '.' || str[i] == '@')) return true;
+       else return false;
     }
-    for (;i < str.length() && thereIs; i++) {
-        if (str[i] == '.' && (str[i] != str.length() - 1) || !(str[i] == '.' && str[i - 1] == '@')) {
-            thereIs = true;
-        }
-    }
-    return thereIs;
+}
+
+bool checkDomain(std::string str) {
+
 }
 
 bool checkEmail (std::string str) {
-    bool check = true;
-    if (!secondPartContainsPoints(str)) check = false;
-    for (int i = 0; i < str.length() && check; i++) {
-        if ((i == 0 && (str[i] == '.' || str[i] == '@'))
-                || (i > 0 && str[i] == '.' && str[i - 1] == '.')
-                    || !checkSymbol(str[i])) {
-            check = false;
-            break;
-        }
-    }
-    return check;
+    if (findPointsAndAts(str)) return true;
+    else return false;
 }
 
 
 int main () {
-    std::string email = "shir@.y.ru";
+    std::string email = "shirokov@ya.ru";
 
-   if (checkEmail(email)) {
-       std::cout << "Yes";
+   if (checkCases(email)) {
+       std::cout << "Yes" << std::endl;
    } else {
-       std::cout << "No";
+       std::cout << "No" << std::endl;
    };
+
+   std::cout << email[email.length() - 1] << std::endl;
+
+
 }
