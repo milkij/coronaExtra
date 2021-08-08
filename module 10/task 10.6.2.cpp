@@ -71,7 +71,7 @@ bool checkEmail (std::string str) {
 }
 
 
-int main () {
+int main() {
     std::string email = "shirokov@ya.ru";
 
    if (checkEmail(email)) {
