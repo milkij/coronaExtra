@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/alexandershirokov/CLionProjects/coronaExtra/module 10/task 10.6.5.cpp" "/Users/alexandershirokov/CLionProjects/coronaExtra/cmake-build-debug/CMakeFiles/coronaExtra.dir/module_10/task_10.6.5.cpp.o"
+  "/Users/alexandershirokov/CLionProjects/coronaExtra/homework_module_11/task 11.6.1.cpp" "/Users/alexandershirokov/CLionProjects/coronaExtra/cmake-build-debug/CMakeFiles/coronaExtra.dir/homework_module_11/task_11.6.1.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

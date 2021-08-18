@@ -78,7 +78,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/alexandershirokov/CLionProjects/coronaExtra/module 10/task 10.6.5.cpp">
+		<Unit filename="/Users/alexandershirokov/CLionProjects/coronaExtra/homework_module_11/task 11.6.1.cpp">
 			<Option target="coronaExtra"/>
 		</Unit>
 		<Unit filename="/Users/alexandershirokov/CLionProjects/coronaExtra/CMakeLists.txt">
