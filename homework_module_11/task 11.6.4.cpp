@@ -51,17 +51,23 @@ int sumOfChars(std::string x) {
 }
 
 std::string cutZeros(std::string s) {
-    int i=0,j=s.length();
-    for (;i<s.length();) {
-        if(s[i]=='0') i++;
-        else break;
+    if(s[0]=='0'){
+        int i=0;
+        for(;i<s.length();) {
+            if(s[i]=='0') i++;
+            else break;
+        }
+        s.erase(0,i);
     }
-    for (;j!=0;j--) {
-        if(s[j]=='0') continue;
-        else break;
+    if(s[s.length()-1]=='0'){
+        int i=s.length()-1;
+        for(;i!=0;){
+            if(s[i]=='0') i--;
+            else break;
+        }
+        s.erase(i+1,s.length()-1);
     }
-    if (s.find('.')!=-1) return s.substr(i,j-1);
-    else return s.substr(i,j);
+    return s;
 }
 
 int main () {
@@ -71,16 +77,13 @@ int main () {
     std::string y;
     std::cin >> y;
 
-    x = cutZeros(x);
-    y = cutZeros(y);
-    std::cout << x <<std::endl;
-    std::cout << y <<std::endl;
-    if (checkFloat(x) && checkFloat(y)) {
+
+    if (checkFloat(cutZeros(x)) && checkFloat(cutZeros(y))) {
         int first = sumOfChars(x), second = sumOfChars(y);
         if(first<second) std::cout << "less" << std::endl;
         else if (first>second) std::cout << "more" << std::endl;
         else std::cout << "equal" << std::endl;
     } else std::cout << "Error" << std::endl;
-
-
+    std::cout << cutZeros(x) << std::endl;
+    std::cout << cutZeros(y) << std::endl;
 }
