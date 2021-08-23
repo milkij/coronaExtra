@@ -77,13 +77,14 @@ int main () {
     std::string y;
     std::cin >> y;
 
-
-    if (checkFloat(cutZeros(x)) && checkFloat(cutZeros(y))) {
+    x=cutZeros(x);
+    y=cutZeros(y);
+    if (checkFloat(x) && checkFloat(y)) {
         int first = sumOfChars(x), second = sumOfChars(y);
         if(first<second) std::cout << "less" << std::endl;
         else if (first>second) std::cout << "more" << std::endl;
         else std::cout << "equal" << std::endl;
     } else std::cout << "Error" << std::endl;
-    std::cout << cutZeros(x) << std::endl;
-    std::cout << cutZeros(y) << std::endl;
+    //std::cout << cutZeros(x) << std::endl;
+    //std::cout << cutZeros(y) << std::endl;
 }
