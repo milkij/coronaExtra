@@ -51,6 +51,12 @@ int sumOfChars(std::string x) {
 }
 
 std::string cutZeros(std::string s) {
+    bool isPoints = false;
+    int points=0;
+    for (int i=0; i<s.length();i++){
+        if(s[i]=='.')points++;
+    }
+    if(points==1)isPoints=true;
     if(s[0]=='0'){
         int i=0;
         for(;i<s.length();) {
@@ -59,7 +65,7 @@ std::string cutZeros(std::string s) {
         }
         s.erase(0,i);
     }
-    if(s[s.length()-1]=='0'){
+    if(s[s.length()-1]=='0' && isPoints){
         int i=s.length()-1;
         for(;i!=0;){
             if(s[i]=='0') i--;
