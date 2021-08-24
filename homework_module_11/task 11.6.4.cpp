@@ -2,6 +2,7 @@
 // Created by  Milkij on 09.08.2021.
 //
 #include "iostream"
+#include "cmath"
 
 bool checkFloat (std::string someFloatNumber) {
     int i = 0;
@@ -40,16 +41,6 @@ bool checkFloat (std::string someFloatNumber) {
     } else return false;
 }
 
-int sumOfChars(std::string x) {
-    int sumOf = 0;
-    for (int i = 0; i < x.length(); i++) {
-        if(x[i]=='.') sumOf+=0;
-        else sumOf+=(int)x[i];
-
-    }
-    return sumOf;
-}
-
 std::string cutZeros(std::string s) {
     bool isPoints = false;
     int points=0;
@@ -76,6 +67,41 @@ std::string cutZeros(std::string s) {
     return s;
 }
 
+float sumOfChars(std::string x) {
+    float sumOf = 0;
+    float suOfDecimal=0;
+    int positionOfPoint;
+    bool isExistsPoint = false;
+    for(int i=0; i<x.length(); i++) {
+        if (x[i] == '.') {
+            isExistsPoint = true;
+            positionOfPoint = i;
+            break;
+        }
+    }
+
+    if(isExistsPoint){
+        int countForPow=2;
+        for(int i=0;i<positionOfPoint;i++){
+            sumOf+=(int)x[i];
+        }
+        for (int i=positionOfPoint+1; i<x.length();i++){
+            if(x[i]=='0') countForPow++;
+            else {
+                suOfDecimal += (float) x[i] / std::pow(10, countForPow);
+                countForPow++;
+            }
+        }
+        sumOf+=suOfDecimal;
+    } else {
+        for(int i=0; i<x.length();i++){
+            sumOf+=(int)x[i];
+        }
+    }
+    if(x[0]=='-') sumOf*=-1;
+    return sumOf;
+}
+
 int main () {
     std::cout << "Input two float numbers:\n";
     std::string x;
@@ -86,11 +112,11 @@ int main () {
     x=cutZeros(x);
     y=cutZeros(y);
     if (checkFloat(x) && checkFloat(y)) {
-        int first = sumOfChars(x), second = sumOfChars(y);
+        float first = sumOfChars(x), second = sumOfChars(y);
         if(first<second) std::cout << "less" << std::endl;
         else if (first>second) std::cout << "more" << std::endl;
         else std::cout << "equal" << std::endl;
     } else std::cout << "Error" << std::endl;
-    //std::cout << cutZeros(x) << std::endl;
-    //std::cout << cutZeros(y) << std::endl;
+
+
 }
