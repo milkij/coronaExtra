@@ -64,59 +64,84 @@ std::string cutZeros(std::string s) {
         }
         s.erase(i+1,s.length()-1);
     }
+    //if(isPoints) s.erase(s.find('.'),1);;
     return s;
 }
 
-float sumOfChars(std::string x) {
-    float sumOf = 0;
-    float suOfDecimal=0;
-    int positionOfPoint;
-    bool isExistsPoint = false;
-    for(int i=0; i<x.length(); i++) {
-        if (x[i] == '.') {
-            isExistsPoint = true;
-            positionOfPoint = i;
-            break;
-        }
+std::string devideOnTwoParts(std::string x,int part=1){
+    if (x.find('.')==-1) return x;
+    else {
+        if(part==1) return x.substr(0,x.find('.'));
+        if(part==2) return x.substr(x.find('.')+1,x.length());
     }
-
-    if(isExistsPoint){
-        int countForPow=2;
-        for(int i=0;i<positionOfPoint;i++){
-            sumOf+=(int)x[i];
-        }
-        for (int i=positionOfPoint+1; i<x.length();i++){
-            if(x[i]=='0') countForPow++;
-            else {
-                suOfDecimal += (float) x[i] / std::pow(10, countForPow);
-                countForPow++;
-            }
-        }
-        sumOf+=suOfDecimal;
-    } else {
-        for(int i=0; i<x.length();i++){
-            sumOf+=(int)x[i];
-        }
-    }
-    if(x[0]=='-') sumOf*=-1;
-    return sumOf;
+    return x;
 }
 
+std::string addAccuracy(std::string changedString, std::string lenghtString){
+    if(changedString.find('.')==-1) changedString+='.';
+    int count=lenghtString.length()-changedString.length();
+    for(int i = 0;i<count;i++){
+        changedString.append("0");
+    }
+    return changedString;
+}
+
+int sum(std::string x){
+    int sum=0;
+    for(int i=0;i<x.length();i++){
+        if(x[i]=='-') continue;
+        else sum+=(int)x[i];
+    }
+    if(x[0]=='-') sum*=-1;
+    return sum;
+}
+
+int convertCharToInt (char c,std::string s){
+    if(s[0]=='-') return (int)c*-1;
+    else return (int)c;
+}
+
+void sumOfChars(std::string x, std::string y) {
+    int fX= sum(devideOnTwoParts(x));
+    int fY= sum(devideOnTwoParts(y));
+    if(fX>fY) std::cout << "more" << std::endl;
+    else if(fX<fY) std::cout << "less" << std::endl;
+    else if((x.find('.')!=-1 && x.find('.')!=x.length()-1) || (y.find('.')!=-1 && y.find('.')!=y.length()-1))  {
+        //std::cout << "there is no decision" << std::endl;
+        std::string sX,sY;
+        sX= devideOnTwoParts(addAccuracy(x,y),2);
+        sY= devideOnTwoParts(addAccuracy(y,x),2);
+        bool isEquel = true;
+        for(int i=0;i<sX.length();i++){
+            if(convertCharToInt(sX[i],x)>convertCharToInt(sY[i],y)){
+                std::cout << "more" << std::endl;
+                isEquel= false;
+                break;
+            } else if(convertCharToInt(sX[i],x)<convertCharToInt(sY[i],y)){
+                std::cout << "less" << std::endl;
+                isEquel= false;
+                break;
+            } else continue;
+        }
+        if(isEquel) std::cout<<"equel"<<std::endl;
+    }
+    else {
+        std::cout<<"equel"<<std::endl;
+    }
+    }
+
 int main () {
-    std::cout << "Input two float numbers:\n";
-    std::string x;
-    std::cin >> x;
-    std::string y;
-    std::cin >> y;
+    //std::cout << "Input two float numbers:\n";
+    std::string x="000000000000012.0100000000000000000000000000000000000000000000000000000001";
+    //std::cin >> x;
+    std::string y="12.001";
+    //std::cin >> y;
 
     x=cutZeros(x);
     y=cutZeros(y);
     if (checkFloat(x) && checkFloat(y)) {
-        float first = sumOfChars(x), second = sumOfChars(y);
-        if(first<second) std::cout << "less" << std::endl;
-        else if (first>second) std::cout << "more" << std::endl;
-        else std::cout << "equal" << std::endl;
+        sumOfChars(x,y);
     } else std::cout << "Error" << std::endl;
-
-
+    //std::cout << addAccuracy(x,y)<< std::endl;
+    //std::cout << convertCharToInt('1',x) << std::endl;
 }
