@@ -131,11 +131,11 @@ void sumOfChars(std::string x, std::string y) {
     }
 
 int main () {
-    //std::cout << "Input two float numbers:\n";
-    std::string x="000000000000012.0100000000000000000000000000000000000000000000000000000001";
-    //std::cin >> x;
-    std::string y="12.001";
-    //std::cin >> y;
+    std::cout << "Input two float numbers:\n";
+    std::string x;
+    std::cin >> x;
+    std::string y;
+    std::cin >> y;
 
     x=cutZeros(x);
     y=cutZeros(y);
