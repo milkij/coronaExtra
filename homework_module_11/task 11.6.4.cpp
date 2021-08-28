@@ -68,6 +68,7 @@ std::string cutZeros(std::string s) {
     return s;
 }
 
+
 std::string devideOnTwoParts(std::string x,int part=1){
     if (x.find('.')==-1) return x;
     else {
@@ -92,13 +93,30 @@ int sum(std::string x){
         if(x[i]=='-') continue;
         else sum+=(int)x[i];
     }
-    if(x[0]=='-') sum*=-1;
+    if(x[0]=='-' && x[1]!='0') sum*=-1;
     return sum;
 }
 
 int convertCharToInt (char c,std::string s){
     if(s[0]=='-') return (int)c*-1;
     else return (int)c;
+}
+
+bool checkZeros(std::string string) {
+    bool isNoExistsDiffSymb = true;
+    for(int i=0;i<string.length() && isNoExistsDiffSymb;i++){
+        if(string[i]=='.' || string[i]=='-'|| string[i]=='0') continue;
+        else isNoExistsDiffSymb=false;
+
+    }
+    return isNoExistsDiffSymb;
+}
+
+std::string excludeExceptions (std::string x) {
+    if(x.length()==1 && x[0]=='.') return x="0";
+    if(x.length()==2 && x[0]=='-' && x[1]=='.') return x="0";
+    if(x.length()==0) return x="0";
+    else return x;
 }
 
 void sumOfChars(std::string x, std::string y) {
@@ -131,17 +149,26 @@ void sumOfChars(std::string x, std::string y) {
     }
 
 int main () {
-    std::cout << "Input two float numbers:\n";
-    std::string x;
-    std::cin >> x;
-    std::string y;
-    std::cin >> y;
+    bool prod = true;
+    std::string x,y;
+    if(prod){
+        std::cout << "Input two float numbers:\n";
+        std::cin >> x;
+        std::cin >> y;
 
-    x=cutZeros(x);
-    y=cutZeros(y);
-    if (checkFloat(x) && checkFloat(y)) {
-        sumOfChars(x,y);
-    } else std::cout << "Error" << std::endl;
-    //std::cout << addAccuracy(x,y)<< std::endl;
-    //std::cout << convertCharToInt('1',x) << std::endl;
+        x=cutZeros(x);
+        x = excludeExceptions(x);
+        y=cutZeros(y);
+        y = excludeExceptions(y);
+        if (checkFloat(x) && checkFloat(y)) {
+            sumOfChars(x,y);
+        } else std::cout << "Error" << std::endl;
+    } else {
+        x="0", y="1.1";
+        x=cutZeros(x);
+        x = excludeExceptions(x);
+        std::cout <<x<< std::endl;
+    }
+
+
 }
