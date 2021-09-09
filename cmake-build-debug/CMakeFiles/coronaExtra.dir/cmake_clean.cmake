@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/coronaExtra.dir/homework_module_12/task_12.4.1.cpp.o"
+  "CMakeFiles/coronaExtra.dir/homework_module_12/task_12.4.2.cpp.o"
   "coronaExtra"
   "coronaExtra.pdb"
 )
