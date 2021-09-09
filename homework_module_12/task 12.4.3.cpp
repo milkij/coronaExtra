@@ -5,7 +5,7 @@
 
 int main(){
     float floatNumbers[15];
-    std::cout << "Input 15 flaot naumbers" << std::endl;
+    std::cout << "Input 15 float naumbers" << std::endl;
     for (int i=0; i<15; i++){
         std::cin >> floatNumbers[i];
     }
