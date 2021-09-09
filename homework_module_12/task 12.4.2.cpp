@@ -14,8 +14,8 @@ int main(){
     }
     int randomIndex,randomPlace;
     while (true) {
-        randomIndex = numbers[rand() % 15];
-        randomPlace = numbers[rand() % 15];
+        randomIndex = rand() % 15;
+        randomPlace = rand() % 15;
       if(randomIndex!=randomPlace) {
           numbers[randomIndex] = numbers[randomPlace];
           break;
@@ -23,15 +23,19 @@ int main(){
     }
 
     std::cout << "The X number is " << X << " and ";
-    int countOfCoincidence = 0, IndexOfCoincidence;
-    for(int i = 0; i<15;) {
-        for (int j = 0; j < 15; i++) {
+    int countOfCoincidence = 0, IndexOfCoincidence = 0;
+    for (int i = 0; i<15; i++) {
+        //std::cout << numbers[i] << std::endl;
+        for(int j = 0; j<15;j++){
             if(numbers[i]==numbers[j]) countOfCoincidence++;
-            if(countOfCoincidence>1) {
-                std::cout << "the Coincidence number is " << numbers[i] << "." << std::endl;
-                break;
-            }
+            if(countOfCoincidence>1) break;
         }
+        if (countOfCoincidence>1) {
+            IndexOfCoincidence=i;
+            break;
+        } else countOfCoincidence = 0;
     }
-    for (int i = 0; i<15; i++) std::cout << numbers[i] << std::endl;
+    //std::cout << countOfCoincidence << std::endl;
+    std::cout << "the coincidence number is " << numbers[IndexOfCoincidence] << "." << std::endl;
+    //for (int i = 0; i<15; i++) std::cout << numbers[i] << std::endl;
 }
