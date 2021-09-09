@@ -10,15 +10,15 @@ int main(){
     for (int i=0; i<10; i++){
         std::cin >> surname[i];
     }
-    std::cout << "Chose 3 random flats from 0 to 9:" << std::endl;
+    std::cout << "Chose 3 random flats from 1 to 10:" << std::endl;
     int numbersOfFlat[3];
     for (int i=0; i<3;i++){
         std::cin >> numbersOfFlat[i];
-        if(numbersOfFlat[i]<0 || numbersOfFlat[i]>9){
-            std::cout << "Incorect number of flat." << std::endl;
+        if(numbersOfFlat[i]<1 || numbersOfFlat[i]>10){
+            std::cout << "Incorect number of flat. Try again." << std::endl;
             i--;
         }
     }
-    for (int i=0;i<3;i++) std::cout<<surname[numbersOfFlat[i]];
+    for (int i=0;i<3;i++) std::cout<<surname[numbersOfFlat[i]-1];
 }
 
