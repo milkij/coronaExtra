@@ -9,7 +9,7 @@ int main()
     std::cout << "a, b, c:";
     std::cin >> a >> b >> c;
     if (a < 0) {
-        std::cout << "Complex scenario is not supported!" << std::endl;
+        std::cout << "Not a quadratic equation!" << std::endl;
     }
     else
     {
@@ -28,7 +28,7 @@ int main()
         }
         else
         {
-            std::cout << "Not a quadratic equation!" << std::endl;
+            std::cout << "Complex scenario is not supported!" << std::endl;
         }
     }
 }
