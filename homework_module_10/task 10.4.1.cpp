@@ -8,17 +8,14 @@ int main()
     float a, b, c;
     std::cout << "a, b, c:";
     std::cin >> a >> b >> c;
-    if (a < 0)
-
-
-    {
-        std::cout << "Not a quadratic equation!" << std::endl;
+    if (a < 0) {
+        std::cout << "Complex scenario is not supported!" << std::endl;
     }
-    else if (b > 0)
+    else
     {
         float discriminant = std::pow(b,2) - 4 * a * b;
         //return 0;
-        if (discriminant > 1)
+        if (discriminant > 0)
         {
             float x1 = (-b + std::sqrt(discriminant)) / (2  * a);
             float x2 = (-b - std::sqrt(discriminant)) / (2 * a);
@@ -31,7 +28,7 @@ int main()
         }
         else
         {
-            std::cout << "Complex scenario is not supported!" << std::endl;
+            std::cout << "Not a quadratic equation!" << std::endl;
         }
     }
 }
