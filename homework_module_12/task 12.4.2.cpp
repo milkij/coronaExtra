@@ -4,29 +4,26 @@
 #include "iostream"
 
 
+#include <iostream>
 int main() {
-    int numbers[15];
-    int X;
-    std::cout << "Input the first number:" << std::endl;
-    std::cin >> X;
-    std::cout << std::endl;
-    for (int i = 0; i < 15; i++) {
-        numbers[i] = X + i;
-    }
-    int randomIndex, randomPlace;
-    while (true) {
-        randomIndex = rand() % 15;
-        randomPlace = rand() % 15;
-        if (randomIndex != randomPlace) {
-            numbers[randomIndex] = numbers[randomPlace];
-            break;
-        }
-    }
+	int numbers[15] = {105, 114, 111, 106, 107, 108, 115, 108, 110, 109, 112, 113, 116, 117, 118};
 
-    std::cout << "The X number is " << X << " and ";
-    int sum=0;
-    for(int i=0;i<15;i++) if(numbers[i]<=numbers[i-1]) std::cout << numbers[i] << " is a dublicate." << std::endl;
-    //for(int i=0;i<15;i++) std::cout << numbers[i] << ", ";
-    //std::cout << "SumOf is " << sum / 15;
+  int n = sizeof(numbers) / sizeof(numbers[0]);
+	int min = numbers[0];
+	int sum = 0;
+
+	for(int i = 0; i < n; ++i)
+	{
+		if(min > numbers[i])
+			min = numbers[i];
+
+		sum += numbers[i];
+	}
+
+	for(int i = min; i < min + n - 1; ++i)
+		sum -= i;
+
+	std::cout << sum;
+	return 0;
 }
 
