@@ -1,3 +1,3 @@
-/Users/alexandershirokov/CLionProjects/coronaExtra/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/alexandershirokov/CLionProjects/coronaExtra/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/alexandershirokov/CLionProjects/coronaExtra/cmake-build-debug/CMakeFiles/coronaExtra.dir
+/Users/alexander/CLionProjects/coronaExtra/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/alexander/CLionProjects/coronaExtra/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/alexander/CLionProjects/coronaExtra/cmake-build-debug/CMakeFiles/coronaExtra.dir
