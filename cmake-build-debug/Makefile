@@ -129,29 +129,29 @@ coronaExtra/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/build
 .PHONY : coronaExtra/fast
 
-module_13/homework_13_1/task_13.1.3.o: module_13/homework_13_1/task_13.1.3.cpp.o
-.PHONY : module_13/homework_13_1/task_13.1.3.o
+module_13/homework_13_2/task_13.2.2.o: module_13/homework_13_2/task_13.2.2.cpp.o
+.PHONY : module_13/homework_13_2/task_13.2.2.o
 
 # target to build an object file
-module_13/homework_13_1/task_13.1.3.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/module_13/homework_13_1/task_13.1.3.cpp.o
-.PHONY : module_13/homework_13_1/task_13.1.3.cpp.o
+module_13/homework_13_2/task_13.2.2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/module_13/homework_13_2/task_13.2.2.cpp.o
+.PHONY : module_13/homework_13_2/task_13.2.2.cpp.o
 
-module_13/homework_13_1/task_13.1.3.i: module_13/homework_13_1/task_13.1.3.cpp.i
-.PHONY : module_13/homework_13_1/task_13.1.3.i
+module_13/homework_13_2/task_13.2.2.i: module_13/homework_13_2/task_13.2.2.cpp.i
+.PHONY : module_13/homework_13_2/task_13.2.2.i
 
 # target to preprocess a source file
-module_13/homework_13_1/task_13.1.3.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/module_13/homework_13_1/task_13.1.3.cpp.i
-.PHONY : module_13/homework_13_1/task_13.1.3.cpp.i
+module_13/homework_13_2/task_13.2.2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/module_13/homework_13_2/task_13.2.2.cpp.i
+.PHONY : module_13/homework_13_2/task_13.2.2.cpp.i
 
-module_13/homework_13_1/task_13.1.3.s: module_13/homework_13_1/task_13.1.3.cpp.s
-.PHONY : module_13/homework_13_1/task_13.1.3.s
+module_13/homework_13_2/task_13.2.2.s: module_13/homework_13_2/task_13.2.2.cpp.s
+.PHONY : module_13/homework_13_2/task_13.2.2.s
 
 # target to generate assembly for a file
-module_13/homework_13_1/task_13.1.3.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/module_13/homework_13_1/task_13.1.3.cpp.s
-.PHONY : module_13/homework_13_1/task_13.1.3.cpp.s
+module_13/homework_13_2/task_13.2.2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/module_13/homework_13_2/task_13.2.2.cpp.s
+.PHONY : module_13/homework_13_2/task_13.2.2.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... coronaExtra"
-	@echo "... module_13/homework_13_1/task_13.1.3.o"
-	@echo "... module_13/homework_13_1/task_13.1.3.i"
-	@echo "... module_13/homework_13_1/task_13.1.3.s"
+	@echo "... module_13/homework_13_2/task_13.2.2.o"
+	@echo "... module_13/homework_13_2/task_13.2.2.i"
+	@echo "... module_13/homework_13_2/task_13.2.2.s"
 .PHONY : help
 
 
