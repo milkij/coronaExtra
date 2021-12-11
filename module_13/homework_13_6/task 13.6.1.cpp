@@ -7,33 +7,32 @@
 std::vector<int> newVec(std::vector<int> vec, int number) {
     if (vec.size()==0 || number==-1) return vec;
     int count=0;
-    std::vector<int> indexes;
     for (int i=0; i<vec.size(); i++) if(vec[i]==number) count++;
-
-    if (count>0) {
-        std::vector<int> newVec(vec.size()-count);
-        int y=0;
-        for (int i=0; i<vec.size(); i++) {
-            if(vec[i]==number) y=i-1;
-            else newVec[y]=vec[i];
-            y++;
-        }
-        return newVec;
-    } else {
-        vec.push_back(number);
-        return vec;
-    }
-
+    std::vector<int> newVec;
+    for (int i=0; i<vec.size();i++) if(vec[i]!=number) newVec.push_back(vec[i]);
+    if (count==0) newVec.push_back(number);
+    return newVec;
 }
 
 int main(){
     std::vector<int> vec = {1, 3, 3, 5, 1};
     int n;
-    std::cout << "input a number";
+    std::cout << "input a number: ";
     while (n!=-1){
         std::cin >> n;
         vec=newVec(vec,n);
-        //vec.push_back(n);
+
+        if (vec.size()==0) {
+            std::cout << "All elements have been deleted" << std::endl;
+            break;
+        } else {
+            std::cout << "result: ";
+            for (int i=0; i<vec.size(); i++) std::cout<< vec[i] << " ";
+            std::cout << std::endl;
+        }
     }
+    std::cout << std::endl << "summery:" << std::endl;
+    if (vec.size()==0) std::cout << "vector is empty" << std::endl;
     for (int i=0; i<vec.size(); i++) std::cout<< vec[i] << " ";
+
 }
