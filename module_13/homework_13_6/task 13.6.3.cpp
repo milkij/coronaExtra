@@ -4,15 +4,6 @@
 #include "iostream"
 #include "vector"
 
-std::vector<int> newVector(std::vector<int> vec, int n) {
-    using namespace std;
-    vector<int> newVec(20);
-    for (int i=1; i<vec.size();i++){
-        newVec[i-1]=vec[i];
-    }
-    newVec.back()=n;
-    return newVec;
-}
 
 int main () {
     using namespace std;
@@ -22,7 +13,12 @@ int main () {
         cout << "Input a value into data base: ";
         cin >> n;
         if (n==-1) break;
-        if (databae.size()>=20) databae= newVector(databae,n);
+        if (databae.size()>=20) {
+            for (int i=0; i<databae.size()-1;i++){
+                databae[i]=databae[i+1];
+            }
+            databae.back()=n;
+        }
         else databae.push_back(n);
     }
     for (int i = 0; i<databae.size(); i++) {
