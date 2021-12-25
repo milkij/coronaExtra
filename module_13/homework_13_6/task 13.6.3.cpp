@@ -25,6 +25,4 @@ int main () {
         cout << databae[i] << ' ';
     }
     cout << endl;
-
-
 }

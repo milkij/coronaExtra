@@ -12,18 +12,20 @@ std::vector<int> newVec(std::vector<int> vec, int number) {
     //for (int i=0; i<vec.size();i++) if(vec[i]!=number) newVec.push_back(vec[i]);
     //if (count==0) newVec.push_back(number);
     //return newVec;
-    using namespace std;
-    vector<int> newVec(vec.size());
+    int i=0;
     int j=0;
-    for (int i=0; i<vec.size(); i++) {
+    for (; i<vec.size(); i++) {
         if(vec[i]!=number) {
-            newVec[j]=vec[i];
+            vec[j]=vec[i];
             ++j;
         }
     }
-    newVec.resize(j);
-    if (newVec.size()==vec.size()) newVec.push_back(number);
-    return newVec;
+    if(i!=j) {
+        vec.resize(j);
+    } else {
+        vec.push_back(number);
+    }
+    return vec;
 
 }
 
