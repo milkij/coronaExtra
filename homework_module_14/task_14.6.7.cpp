@@ -9,14 +9,13 @@ bool getNewTape(bool arr[12][12]) {
     return arr;
 }
 
-bool printTape(bool arr[12][12]) {
+void printTape(bool arr[12][12]) {
     for (int i=0; i<12; i++) {
         for (int j=0; j<12; j++) {
-            if (arr[i][j]==true) cout << 'O' << ' ';
+            if (arr[i][j]==true) cout << 'O' << ' ' << ' ';
             else cout << 'X' << ' ';
         } cout << endl;
     }
-    return arr;
 }
 
 void popBubble(int x, int y,bool arr[12][12]) {
