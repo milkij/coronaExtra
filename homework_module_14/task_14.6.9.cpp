@@ -182,7 +182,7 @@ int main() {
                     cout<<"\n--------Baga Boom!-------\n";
                     p1--;
                     if(p1==0) {
-                        cout<<"\n----\n------ Player1 win! -----\n-----\n";
+                        cout<<"\n----\n------ Player2 win! -----\n-----\n";
                         break;
                     }
                 } else cout<<"\n----------Miss---------\n";
