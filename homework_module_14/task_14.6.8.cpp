@@ -26,9 +26,7 @@ int main() {
 
     for (int i=0; i<5; i++) {
         for (int j=0; j<5; j++) {
-            if (square[i][j]>0) {
-                cout << 1 << ' ';
-            } else cout << 0 << ' ';
+            std::cout<< (square[i][j]>0);;
         }
         cout << endl;
     }

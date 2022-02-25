@@ -19,7 +19,7 @@ int main(){
     }
 
     for (int i=0; i<4; i++) {
-        for (int j=0; j<4; j++) (j==i) ? cout << arr[i][j] << ' ':  cout << '0' << ' ';
+        for (int j=0; j<4; j++)  cout << (j==i) ? arr[i][j] << ' ':  cout << '0' << ' ';
         cout << endl;
     }
 

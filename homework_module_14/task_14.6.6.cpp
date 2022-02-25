@@ -6,12 +6,12 @@
 
 using namespace std;
 int main(){
-    float arr[4][4] = {{1,2,3,4},{1,2,3,4},{1,2,3,4},{1,2,3,4}};
-    vector<float> V = {1,2,3,4};
+    float arr[4][4]; //= {{1,2,3,4},{1,2,3,4},{1,2,3,4},{1,2,3,4}};
+    vector<float> V{4}; //= {1,2,3,4};
     float num;
     cout << "Input 4 numbers." << endl;
     int c=1;
-    for (int i=0; i<V.size(); i++) {
+    for (int i=0; i<4; i++) {
         cout << "Input " << c << ": ";
         c++;
         cin >> num;
@@ -28,13 +28,13 @@ int main(){
         }
     }
 
-    for (int i=0; i<V.size(); i++) {
-        for (int j=0; j<4; j++) {
-            V[i]+=V[i]*arr[i][j];
+    vector<float> C = {0,0,0,0};
+    for (int i=0; i<4; i++) {
 
+        for (int j=0; j<4; j++) {
+            C[i]+=V[i]*arr[j][i];
         }
     }
-
-    for (int i=0; i<V.size(); i++)  cout << V[i] << ' ';
+    for (int i=0; i<4; i++)  cout << C[i] << ' ';
 }
 
