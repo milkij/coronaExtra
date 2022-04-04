@@ -16,20 +16,19 @@
 using namespace std;
 int main () {
     vector<int> a = {-100,-50, -5, 1, 10, 15};
-    for (int i=0; i<a.size()-1; i++) {
-        for (int j=0; j<a.size()-1-i; j++){
-            int temp;
-            if(abs(a[j])>abs(a[j+1])) {
-                temp=a[j];
-                a[j]=a[j+1];
-                a[j+1]=temp;
-
-            }
+    int min,pos;
+    for (int i=0; i<a.size();i++) {
+        if (a[i]>0) {
+            pos=i;
+            break;
         }
     }
-
-    for(int i=0; i<a.size(); i++) {
-        cout<<a[i]<<' ';
+    for (int i=0; i<a.size(); i++) {
+        if(a[pos]<abs(a[i])) {
+            cout<<a[pos]<<' ';
+            pos--;
+        } else pos++;
     }
+
     return 0;
 }

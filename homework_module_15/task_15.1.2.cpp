@@ -14,11 +14,12 @@ using namespace std;
 
 int main () {
     vector <int> a = {2, 7, 11, 15};
-    int sumOfCouple=18;
+    int sumOfCouple=17;
     if (a.size()==0) return 0;
-    for (int i=0; i<a.size()-1;i++) {
-        if (sumOfCouple==a[i]+a[i+1]) {
-            cout<<a[i]<<':'<<a[i+1];
+    for (int i=0; i<a.size();i++) {
+        for (int j=i; j<a.size(); j++)
+        if (sumOfCouple==a[i]+a[j]) {
+            cout<<a[i]<<':'<<a[j];
             break;
         }
     }
