@@ -1,34 +1,21 @@
-//
-// Created by Александр Широков on 04.04.2022.
-//
-/*Вам даётся массив целых чисел, отсортированных по возрастанию.
-Необходимо вывести его на экран отсортированным в порядке возрастания модуля чисел
-Пример:
-Массив {-100,-50, -5, 1, 10, 15}
-Вывод: 1, -5, 10, 15, -50, -100
-Задание со звёздочкой: оптимизировать решение четвёртой задачи, чтобы оно совершало как можно меньше операций
-*/
-//version1.0
-#include "iostream"
-#include "vector"
-#include "math.h"
+#include <iostream>
+#include <vector>
 
-using namespace std;
 int main () {
-    vector<int> a = {-100,-50, -5, 1, 10, 15};
-    int min,pos;
-    for (int i=0; i<a.size();i++) {
-        if (a[i]>0) {
-            pos=i;
-            break;
-        }
+    std::vector<int> v = {-100, -50, -1, 1, 2, 3, 4};
+
+    int j = 0;
+    while (j < v.size() && v[j] < 0) {
+        ++j;
     }
-    for (int i=0; i<a.size(); i++) {
-        if(a[pos]<abs(a[i])) {
-            cout<<a[pos]<<' ';
-            pos--;
-        } else pos++;
+
+    int i = j--;
+    while (j >= 0 || i < v.size()) {
+        int res = (j >= 0 && (i == v.size() || v[i] > -v[j]) ? v[j--] : v[i++]);
+        std::cout << res << ' ';
     }
+
+    std::cout << '\n';
 
     return 0;
 }
