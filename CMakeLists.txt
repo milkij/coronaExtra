@@ -3,4 +3,4 @@ project(coronaExtra)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(coronaExtra "homework_module_15/task_15.1.4.cpp")
+add_executable(coronaExtra "homework_module_16/task_16.4.5.cpp")

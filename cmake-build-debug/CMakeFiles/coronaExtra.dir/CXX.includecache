@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/alexander/CLionProjects/coronaExtra/homework_module_15/task_15.1.4.cpp
+/Users/alexander/CLionProjects/coronaExtra/homework_module_16/task_16.4.5.cpp
 iostream
--
-vector
--
+/Users/alexander/CLionProjects/coronaExtra/homework_module_16/iostream
+sstream
+/Users/alexander/CLionProjects/coronaExtra/homework_module_16/sstream
 
