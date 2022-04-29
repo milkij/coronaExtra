@@ -73,7 +73,7 @@ void checkStatesOfHouse(double temperatureInside, double temperatureOutside,
             std::cout<<switches_state<<std::endl;
         }
         if(temperatureOutside>5 && (switches_state & WATER_PIPE_HEATING)) {
-            switches_state &= WATER_PIPE_HEATING;
+            switches_state &= ~WATER_PIPE_HEATING;
             std::cout<<"WATER_PIPE_HEATING IS OFF"<<std::endl;
             std::cout<<switches_state<<std::endl;
         }
@@ -84,7 +84,7 @@ void checkStatesOfHouse(double temperatureInside, double temperatureOutside,
         }
         if(((hours>=16 || hours<=5) && movementOutside=="no" && (switches_state & LIGHTS_OUTSIDE))
                 || (hours>5 && hours<16) && (switches_state & LIGHTS_OUTSIDE)) {
-            switches_state &= LIGHTS_OUTSIDE;
+            switches_state &= ~LIGHTS_OUTSIDE;
             std::cout<<"LIGHTS_OUTSIDE IS OFF"<<std::endl;
             std::cout<<switches_state<<std::endl;
         }
@@ -94,7 +94,7 @@ void checkStatesOfHouse(double temperatureInside, double temperatureOutside,
             std::cout<<switches_state<<std::endl;
         }
         if(temperatureInside>=25 && (switches_state & HEATERS)){
-            switches_state&=HEATERS;
+            switches_state&=~HEATERS;
             std::cout<<"HEATERS IS OFF"<<std::endl;
             std::cout<<switches_state<<std::endl;
         }
@@ -104,7 +104,7 @@ void checkStatesOfHouse(double temperatureInside, double temperatureOutside,
             std::cout<<switches_state<<std::endl;
         }
         if(temperatureInside<=25 && (switches_state & CONDITIONER)){
-            switches_state&=CONDITIONER;
+            switches_state&=~CONDITIONER;
             std::cout<<"CONDITIONER IS OFF"<<std::endl;
             std::cout<<switches_state<<std::endl;
         }
@@ -117,7 +117,7 @@ void checkStatesOfHouse(double temperatureInside, double temperatureOutside,
             std::cout<<switches_state<<std::endl;
         }
         if(lightInsdie=="off" && (switches_state & LIGHTS_OUTSIDE)) {
-            switches_state&=LIGHTS_INSIDE;
+            switches_state&=~LIGHTS_INSIDE;
             std::cout<<"LIGHTS_INSIDE IS OFF"<<std::endl;
             std::cout<<switches_state<<std::endl;
         }
