@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/alexander/CLionProjects/coronaExtra/homework_module_16/task_16.4.5.cpp
+/Users/alexander/CLionProjects/coronaExtra/homework_module_17/task3.cpp
 iostream
-/Users/alexander/CLionProjects/coronaExtra/homework_module_16/iostream
-sstream
-/Users/alexander/CLionProjects/coronaExtra/homework_module_16/sstream
+/Users/alexander/CLionProjects/coronaExtra/homework_module_17/iostream
+cstring
+/Users/alexander/CLionProjects/coronaExtra/homework_module_17/cstring
 
