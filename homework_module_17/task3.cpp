@@ -19,14 +19,10 @@ bool substr(char* a, char* b) {
             i++;
             if(*(a+i)=='\0') pos=-1;
         }
-        if(pos==0) {
-            //std::cout<<std::endl<<"Not_equel"<<std::endl;
-            equel=false;
-        } else if (pos==-1) {
+            if (pos==-1) {
             equel=false;
             break;
-        }
-        else pos+=1;
+        } else pos+=1;
         for (int y = 1; *(b+y)!='\0' && equel;) {
             if(*(b+y)==*(a+pos)) {
                 y++;
