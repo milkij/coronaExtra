@@ -3,9 +3,9 @@
 //
 #include "iostream"
 void swap(int* a, int* b) {
-    *a += *b;
-    *b = *a-*b;
-    *a -= *b;
+    *a ^= *b;
+    *b = *a&~*b;
+    *a &=~ *b;
     std::cout << *a << ' ' << *b << std::endl;
 }
 int main(){

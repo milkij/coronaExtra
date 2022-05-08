@@ -129,29 +129,29 @@ coronaExtra/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/build
 .PHONY : coronaExtra/fast
 
-homework_module_17/task3.o: homework_module_17/task3.cpp.o
-.PHONY : homework_module_17/task3.o
+homework_module_17/task1.o: homework_module_17/task1.cpp.o
+.PHONY : homework_module_17/task1.o
 
 # target to build an object file
-homework_module_17/task3.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/homework_module_17/task3.cpp.o
-.PHONY : homework_module_17/task3.cpp.o
+homework_module_17/task1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/homework_module_17/task1.cpp.o
+.PHONY : homework_module_17/task1.cpp.o
 
-homework_module_17/task3.i: homework_module_17/task3.cpp.i
-.PHONY : homework_module_17/task3.i
+homework_module_17/task1.i: homework_module_17/task1.cpp.i
+.PHONY : homework_module_17/task1.i
 
 # target to preprocess a source file
-homework_module_17/task3.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/homework_module_17/task3.cpp.i
-.PHONY : homework_module_17/task3.cpp.i
+homework_module_17/task1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/homework_module_17/task1.cpp.i
+.PHONY : homework_module_17/task1.cpp.i
 
-homework_module_17/task3.s: homework_module_17/task3.cpp.s
-.PHONY : homework_module_17/task3.s
+homework_module_17/task1.s: homework_module_17/task1.cpp.s
+.PHONY : homework_module_17/task1.s
 
 # target to generate assembly for a file
-homework_module_17/task3.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/homework_module_17/task3.cpp.s
-.PHONY : homework_module_17/task3.cpp.s
+homework_module_17/task1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/homework_module_17/task1.cpp.s
+.PHONY : homework_module_17/task1.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... coronaExtra"
-	@echo "... homework_module_17/task3.o"
-	@echo "... homework_module_17/task3.i"
-	@echo "... homework_module_17/task3.s"
+	@echo "... homework_module_17/task1.o"
+	@echo "... homework_module_17/task1.i"
+	@echo "... homework_module_17/task1.s"
 .PHONY : help
 
 
