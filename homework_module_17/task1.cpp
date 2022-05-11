@@ -4,12 +4,15 @@
 #include "iostream"
 void swap(int* a, int* b) {
     *a ^= *b;
-    *b = *a&~*b;
-    *a &=~ *b;
+    std::cout<<*a<<std::endl;
+    *b ^= *a;
+    std::cout<<*b<<std::endl;
+    *a ^= *b;
+    std::cout<<*a<<std::endl;
     std::cout << *a << ' ' << *b << std::endl;
 }
 int main(){
-    int a = 10;
+    int a = 15;
     int b = 20;
     swap(&a, &b);
 }
