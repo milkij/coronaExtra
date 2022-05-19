@@ -12,7 +12,7 @@ void swap(int* a, int* b) {
     std::cout << *a << ' ' << *b << std::endl;
 }
 int main(){
-    int a = 15;
+    int a = 10;
     int b = 20;
     swap(&a, &b);
 }
