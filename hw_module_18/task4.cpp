@@ -6,12 +6,12 @@
 void evendigits(long n, int& ans)
 {
     if (n==0) return;
-    if (n%2 == 0 && n%10) ans++;
+    if (n%2 == 0 || n%10==0) ans++;
     evendigits(n/=10,ans);
 };
 int main()
 {
-    long long n = 1002022;
+    long long n = 9223372036854775806;
     int ans=0;
     evendigits(n,ans);
     std::cout<< ans;
