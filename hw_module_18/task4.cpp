@@ -5,6 +5,7 @@
 
 void evendigits(long n, int& ans)
 {
+    assert(n>=0);
     if (n==0) return;
     if (n%2 == 0 || n%10==0) ans++;
     evendigits(n/=10,ans);
