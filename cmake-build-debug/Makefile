@@ -129,29 +129,29 @@ coronaExtra/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/build
 .PHONY : coronaExtra/fast
 
-hw_module_18/task4.o: hw_module_18/task4.cpp.o
-.PHONY : hw_module_18/task4.o
+module_19/task5.o: module_19/task5.cpp.o
+.PHONY : module_19/task5.o
 
 # target to build an object file
-hw_module_18/task4.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/hw_module_18/task4.cpp.o
-.PHONY : hw_module_18/task4.cpp.o
+module_19/task5.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/module_19/task5.cpp.o
+.PHONY : module_19/task5.cpp.o
 
-hw_module_18/task4.i: hw_module_18/task4.cpp.i
-.PHONY : hw_module_18/task4.i
+module_19/task5.i: module_19/task5.cpp.i
+.PHONY : module_19/task5.i
 
 # target to preprocess a source file
-hw_module_18/task4.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/hw_module_18/task4.cpp.i
-.PHONY : hw_module_18/task4.cpp.i
+module_19/task5.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/module_19/task5.cpp.i
+.PHONY : module_19/task5.cpp.i
 
-hw_module_18/task4.s: hw_module_18/task4.cpp.s
-.PHONY : hw_module_18/task4.s
+module_19/task5.s: module_19/task5.cpp.s
+.PHONY : module_19/task5.s
 
 # target to generate assembly for a file
-hw_module_18/task4.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/hw_module_18/task4.cpp.s
-.PHONY : hw_module_18/task4.cpp.s
+module_19/task5.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coronaExtra.dir/build.make CMakeFiles/coronaExtra.dir/module_19/task5.cpp.s
+.PHONY : module_19/task5.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... coronaExtra"
-	@echo "... hw_module_18/task4.o"
-	@echo "... hw_module_18/task4.i"
-	@echo "... hw_module_18/task4.s"
+	@echo "... module_19/task5.o"
+	@echo "... module_19/task5.i"
+	@echo "... module_19/task5.s"
 .PHONY : help
 
 
